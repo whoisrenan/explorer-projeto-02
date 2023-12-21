@@ -71,16 +71,30 @@
   border: 1px solid #eceff2;
   margin: 0 auto;
 }
-.wave {
-  position: absolute;
-  bottom: -140px;
-  left: 0;
-  width: 100%;
-  z-index: -1;
+#img-wave {
+  background: url(images/wave.svg) no-repeat;
 }
-@media (min-width: 1660px) {
-  .wave {
-    bottom: -40px;
+#wave {
+  width: 100%;
+  position: absolute;
+  transform: translate(calc(0%), calc(100% - 50%));
+  bottom: 0;
+  background-size: contain;
+}
+@media (min-width: 1520px) {
+  #wave {
+    position: absolute;
+    bottom: -80px;
+  }
+} 
+@media (min-width: 1600px) and (max-width: 1920px) {
+  #wave {
+    position: fixed;
+    bottom: 80px;
   }
 }
-
+@media (max-width: 320px) {
+  #wave {
+    width: 100%;
+  }
+}
